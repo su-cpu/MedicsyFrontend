@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SignUp</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+		<div class="sign-up-form">
+			<form>
+				<h1>Create Account</h1>
+				<input type="name" name="name" placeholder="UserName" id="name" class="input-box">
+				<input type="email" name="email" placeholder="Email" id="email" class="input-box">
+				<input type="password" name="password" placeholder="Password" id="password">
+				<p><span><input type="checkbox"></span>I agree to the terms and services</p>
+				<button onclick="signup()" type="button" class="sign-up-button">SignUp</button>
+                <hr>
+				<p class="or">OR</p>
+				<p class="or">Do you already have an account</p>
+				<button type="button" class="sign-up-button"><a href="Login.html"></a>Sign In</button>
+				<script>
+					function signup() {
+
+						let username = document.getElementById('name').value;
+						let email = document.getElementById('email').value;
+						let password = document.getElementById('password').value;
+						localStorage.setItem('username', username);
+						localStorage.setItem('email', email);
+						localStorage.setItem('password', password);
+						alert("data in local storage ");
+					}
+				</script>
+
+			</form>
+</body>
+
+</html>
